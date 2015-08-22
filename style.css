@@ -1,0 +1,72 @@
+/* 
+	Theme Name: Live in a story
+	Theme URL: http://someant.com
+	Description: 表白被拒绝了
+	Author: Someant
+	Author URI: http://someant.com
+	Version: Beta
+*/
+
+.container{
+	font-size: 1px
+}
+.item{
+	padding: 10px
+}
+body{
+	font-family: miranafont,"Hiragino Sans GB",STXihei,"Microsoft YaHei",SimSun,sans-serif;
+}
+h4{
+	font-weight: normal;
+	font-size: 1.2em
+	
+}
+h4 a{
+	color: #000
+}
+h4 a:hover{
+	transition: .2s;
+	color: #819d73;
+}
+::selection {
+	background-color: #819d73;
+	color: #fff;
+}
+#date{
+	font-size: 14px;
+	padding: 0 0 5px 0
+}
+.ui p{
+	font-size: 14px;
+	line-height: 180%
+}
+#header{
+	margin: 10px auto;
+	text-align: center;
+}
+#header a{
+	transition: 1s;
+	font-size: .8em
+}
+#header a{
+	background: #000;
+	padding:5px 10px 5px 10px;
+	color: #FFF;
+
+}
+img{
+	max-width: 670px
+}
+#more{
+	background: none;
+	border: 0
+}
+#more a{
+	color: #333;
+	font-size: .9em;
+	padding: 10px;
+}
+pre{
+	padding: 5px;
+	font-family: miranafont,"Hiragino Sans GB",STXihei,"Microsoft YaHei",SimSun,sans-serif;
+}
