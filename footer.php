@@ -1,4 +1,4 @@
-  <div class="ui vertical footer segment">
+﻿  <div class="ui vertical footer segment">
     <div class="ui center aligned container">
       <div class="ui inverted section divider"></div>
 
@@ -19,7 +19,17 @@
       </div>
     </div>
   </div>
-
+<script>
+  //resize images width
+  $(window).load(function(){
+    var box=$('#userpanel .ui').width();
+    $('img').attr({"height":null,"width":box-10+'px'});   
+  }); 
+  $(window).resize(function() {
+    var box=$('#userpanel .ui').width();
+    $('img').attr({"height":null,"width":box-10+'px'}); 
+  });
+</script>
 
 </body>
 

@@ -55,7 +55,7 @@ h4 a:hover{
 
 }
 img{
-	max-width: 670px
+	max-width: 100%
 }
 #more{
 	background: none;
@@ -69,4 +69,9 @@ img{
 pre{
 	padding: 5px;
 	font-family: miranafont,"Hiragino Sans GB",STXihei,"Microsoft YaHei",SimSun,sans-serif;
+}
+@media(max-width:650px){
+	.ad{
+		display: none
+	}
 }

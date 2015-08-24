@@ -32,11 +32,20 @@ add_action('init', 'load_post');
 
 		
 //代码
-	function codeebox($atts, $content=null, $code="") {
+function codeebox($atts, $content=null, $code="") {
 	$return = "<pre class='prettyprint'>";
 	$return .= do_shortcode($content);
-					$return .= "</pre>";
-					return $return;
-				}
-				add_shortcode('codee' , 'codeebox' );		
+	$return .= "</pre>";
+	return $return;
+}
+add_shortcode('codee' , 'codeebox' );
+
+//下载
+function downloadbox($atts, $content=null, $code="") {
+	$return = "<i class='cloud download icon'></i>";
+	$return .= do_shortcode($content);
+	$return .= "";
+	return $return;
+}
+add_shortcode('down1' , 'downloadbox' );							
 			
