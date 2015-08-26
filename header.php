@@ -7,7 +7,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
   <!-- Site Properities -->
-  <title><?php echo bloginfo('title'); ?></title>
+  <meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
+	<meta name="keywords" content="<?php if (is_home()) { echo ($options['keyword_content']);} else echo $keywords;?>"/>
+	<meta name="description" content="<?php if (is_home()) { echo ($options['description_content']);} else echo $description = mb_strimwidth(strip_tags($post->post_content),0,200);?>"/>
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+	<title>
+		<?php 
+		if ( is_home() ) {
+			echo bloginfo( 'name' );$paged = get_query_var('paged'); if($paged > 1) printf(' | 第%s页',$paged);
+		} elseif ( is_archive() ) {
+			echo wp_title('');  if($paged > 1) printf(' - 第%s页',$paged);    echo ' - ';    bloginfo( 'name' );
+		} elseif ( is_search() ) {
+			echo '&quot;'.wp_specialchars($s).'&quot;的搜索结果 | '; bloginfo( 'name' );
+		} elseif ( is_tag() ) {
+			echo wp_title('TAG:');if($paged > 1) printf(' - 第%s页',$paged);echo ' - '; bloginfo( 'name' );
+		}  elseif ( is_404() ) {
+			echo '未找到内容'; bloginfo( 'name' );
+		} else {
+			echo wp_title( '-', false, right )  ; bloginfo( 'name' );
+		} ?>
+	</title>
 
  
   <link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/components/reset.css">

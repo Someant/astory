@@ -18,7 +18,7 @@
         <div class="right floated content">                     
             <div class="ui small" id="date"> 
               <i class="calendar outline icon"></i><?php echo the_date(); ?>
-              <i class="tag icon"></i>杂念
+              <i class="tag icon"></i> <?php the_category(' '); ?>
             </div>
         </div>          
         <?php echo the_content(); ?>
